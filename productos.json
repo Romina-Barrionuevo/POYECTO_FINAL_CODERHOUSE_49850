@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "nombre": "Sobrenatural",
+        "autor": "Joe Dispenza",
+        "precio": 27000,
+        "imagen": "./img/sobrenatural.png"
+    },
+    {
+        "id": 2,
+        "nombre": "El placebo eres tú",
+        "autor": "Joe Dispenza",
+        "precio": 27250,
+        "imagen": "./img/elplaceboerestu.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Deja de ser tú",
+        "autor": "Joe Dispenza",
+        "precio": 28000,
+        "imagen": "./img/dejadesertu.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Metafisica Vol.I",
+        "autor": "Conny Mendez",
+        "precio": 12000,
+        "imagen": "./img/metafisicavol1.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Metafisica Vol.II",
+        "autor": "Conny Mendez",
+        "precio": 12000,
+        "imagen": "./img/metafisicavol2.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Metafisica Vol.III",
+        "autor": "Conny Mendez",
+        "precio": 13000,
+        "imagen": "./img/metafisicavol3.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Felicidad",
+        "autor": "Osho",
+        "precio": 12000,
+        "imagen": "./img/felicidad.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Creatividad",
+        "autor": "Osho",
+        "precio": 12000,
+        "imagen": "./img/creatividad.png"
+    }
+]

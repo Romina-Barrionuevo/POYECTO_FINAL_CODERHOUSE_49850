@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--flavicon pestaña-->
+    <link rel="icon" type="image/x-icon" href="./img/Logotipodos.png" />
+    <title>Romina Barrionuevo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!--fuente de google-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Mulish:wght@300&family=Patrick+Hand&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container d-flex">
+          <a class="navbar-brand me-auto" href="#">
+            <img
+              src="./img/Logotipodos.png"
+              class="rounded-circle"
+              alt=""
+              width="90"
+              height="90"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Carrito</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <h1>Libros Digitales</h1>
+      <div class="container">
+        <div id="contenedor" class="row container"></div>
+        <!--este id lo uso en js-->
+      </div>
+
+      <div id="carrito"></div>
+      <!--este id lo uso en js-->
+      <a name="carrito"></a>
+    </main>
+
+    <footer class="footer">
+      <div>Proyecto Final. Romina Barrionuevo. comisión 49850.</div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
