@@ -62,7 +62,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Carrito</a>
+                <a class="nav-link" href="#banCarrito">Carrito</a>
               </li>
             </ul>
           </div>
@@ -70,16 +70,38 @@
       </nav>
     </header>
     <main class="container">
-      <h1>Libros Digitales</h1>
+       <h1>Libros Digitales</h1>
+
+<!-- buscar productos -->
+<div class="buscador-input">
+  <input type="text" id="buscarInput" placeholder="buscar libro por nombre..." />
+</div>
+<p id="noEncontrado" class="no-results">No se encontraron resultados.</p>
+
+
+<br>
+<br>
+
+
+    
       <div class="container">
         <div id="contenedor" class="row container"></div>
         <!--este id lo uso en js-->
       </div>
 
+      <section id="banCarrito">
       <div id="carrito"></div>
       <!--este id lo uso en js-->
       <a name="carrito"></a>
+    </section>
+
+      </main>
     </main>
+
+
+
+
+
 
     <footer class="footer">
       <div>Proyecto Final. Romina Barrionuevo. comisión 49850.</div>
