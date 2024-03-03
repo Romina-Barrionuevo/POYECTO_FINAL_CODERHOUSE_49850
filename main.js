@@ -88,7 +88,6 @@ const contenedor = document.getElementById("contenedor");
 const buscarInput = document.getElementById("buscarInput");
 const noEncontrado = document.getElementById("noEncontrado");
 
-
 const crearProducto = (lista) =>{
 
  contenedor.innerHTML = "";
@@ -114,11 +113,9 @@ const crearProducto = (lista) =>{
   }
 };
 
-
 function filtrar() {
   const buscar = buscarInput.value.toLowerCase();
-   const productosFiltrados = productos.filter((productos) => productos.nombre.toLowerCase().startsWith(buscar));
-
+  const productosFiltrados = productos.filter((productos) => productos.nombre.toLowerCase().startsWith(buscar));
 
   crearProducto(productosFiltrados);
   
@@ -127,8 +124,6 @@ function filtrar() {
 ingresarProductosAlArray(productos);
 
 buscarInput.addEventListener("input", filtrar);
-
-
 
 const notificacion = () => {
     Toastify({
@@ -141,17 +136,10 @@ const notificacion = () => {
       }).showToast();
 };
 
-
-
 const agregarNotificar = (indice) => {
     agregarAlCarrito(indice);
     notificacion(indice);
 };
-
-
-//crearProducto();
-
-
 
 let carrito=[]; //carrito
 
@@ -167,7 +155,7 @@ const agregarAlCarrito = (indice) =>{
         carrito.push(productoAgregar); // lo agrego al carrito
         crearCarrito();
     }else{
-       carrito[indiceEncontradoCarrito].cantidad +=1;
+    carrito[indiceEncontradoCarrito].cantidad +=1;
         crearCarrito();
     }
 
@@ -256,7 +244,7 @@ const finalizarCompra = () =>{
     guardarCarritoEnLocalStorage();
 
      // Luego de finalizar la compra, borra el carrito del localStorage
-     localStorage.removeItem('carrito');
+      localStorage.removeItem('carrito');
 
      carrito=[]; //para que se vacie carrito cuando finalizo la compra
 };
@@ -268,27 +256,27 @@ const mostrarFormulario = () => {
     const formulario =`    
     <h2> DATOS PARA EL ENVÍO </h2>   
     <div class="contact_secction-container p-5 form-control">    
-     <div class="row">    
-       <div class="contact_secction_item mb-3  ">    
+      <div class="row">    
+        <div class="contact_secction_item mb-3  ">    
         <label>Nombre</label><br>   
         <input type="text" class="form-control" id="nombre" placeholder="Nombre"  value required />    
-       </div>    
+        </div>    
       <div class="contact_secction_item mb-3 ">    
-       <label>E-mail</label><br>    
-       <input type="text" class="form-control" id="mail" placeholder="E-mail"  value required />    
+        <label>E-mail</label><br>    
+        <input type="text" class="form-control" id="mail" placeholder="E-mail"  value required />    
       </div>
       <div class="contact_secction_item mb-3 ">
-       <label>Telefono</label><br>
-       <input type="number" class="form-control" id="telefono" placeholder="Telefono" value required />
+        <label>Telefono</label><br>
+        <input type="number" class="form-control" id="telefono" placeholder="Telefono" value required />
       </div>
-       <div class="contact_secction_item mb-3 ">
-       <label>Domicilio</label><br>
-       <input type="text" class="form-control" id="domicilio" placeholder="Domicilio"  value required />
-       </div>
+        <div class="contact_secction_item mb-3 ">
+        <label>Domicilio</label><br>
+        <input type="text" class="form-control" id="domicilio" placeholder="Domicilio"  value required />
+        </div>
       <div class="contact-button"> 
-       <button type="button" class="btn btn-info envio" onclick="validarForm()">Confirmar</button>
+        <button type="button" class="btn btn-info envio" onclick="validarForm()">Confirmar</button>
       </div>
-     </div>
+      </div>
     </div>   
     `;
     bannerCarrito.innerHTML = formulario;
@@ -340,7 +328,7 @@ const validarForm = () =>{
     let telefono = document.getElementById("telefono");
     let domicilio = document.getElementById("domicilio");
 
-       if (!nombre.value && !expRegNombre.exec(nombre.value) && !correo.value && !expRegCorreo.exec(correo.value) && !telefono.value && !expRegTelefono.exec(telefono.value) && !domicilio.value && !expRegDomicilio.exec(domicilio.value)) {
+      if (!nombre.value && !expRegNombre.exec(nombre.value) && !correo.value && !expRegCorreo.exec(correo.value) && !telefono.value && !expRegTelefono.exec(telefono.value) && !domicilio.value && !expRegDomicilio.exec(domicilio.value)) {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -358,10 +346,10 @@ const validarForm = () =>{
           //domicilio.focus();
           campo = false;
           return false;
-       }
+      }
        //Campo nombre
-       if(!nombre.value)
-       {
+      if(!nombre.value)
+      {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -375,9 +363,9 @@ const validarForm = () =>{
         nombre.focus();
         campo = false;
         return false;
-       }
-       if (!expRegNombre.exec(nombre.value))
-       {
+      }
+        if (!expRegNombre.exec(nombre.value))
+      {
         
         Swal.fire({
             icon: "error",
@@ -393,11 +381,11 @@ const validarForm = () =>{
           nombre.focus();
           campo = false;
           return false;
-       }
+        }
 
        //campo email
-       if(!correo.value)
-       {
+        if(!correo.value)
+        {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -411,10 +399,10 @@ const validarForm = () =>{
         correo.focus();
         campo = false;
         return false;
-       }
+        }
 
-       if(!expRegCorreo.exec(correo.value))
-       {
+        if(!expRegCorreo.exec(correo.value))
+        {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -425,14 +413,14 @@ const validarForm = () =>{
             confirmButtonColor:`rgb(101 60 105)`,
           }); 
          //alert("El campo correo no tiene el formato correcto.")
-         correo.focus();
-         campo = false;
-         return false;
+          correo.focus();
+          campo = false;
+          return false;
         }
 
        //Campo telefono
-       if(!telefono.value)
-       {
+        if(!telefono.value)
+        {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -446,9 +434,9 @@ const validarForm = () =>{
         telefono.focus();
         campo = false;
         return false;
-       }
-       if(!expRegTelefono.exec(telefono.value))
-       {
+        }
+        if(!expRegTelefono.exec(telefono.value))
+        {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -459,14 +447,14 @@ const validarForm = () =>{
             confirmButtonColor:`rgb(101 60 105)`,
           }); 
          //alert("El campo teléfonp admite números")
-         telefono.focus();
-         campo = false;
-         return false;
-       }
+          telefono.focus();
+          campo = false;
+          return false;
+        }
 
        //Campo domicilio
-       if(!domicilio.value)
-       {
+        if(!domicilio.value)
+        {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -480,9 +468,9 @@ const validarForm = () =>{
         domicilio.focus();
         campo = false;
         return false;
-       }
-       if (!expRegDomicilio.exec(domicilio.value))
-       {
+        }
+        if (!expRegDomicilio.exec(domicilio.value))
+        {
         Swal.fire({
             icon: "error",
             title: "Oops...",
@@ -496,17 +484,17 @@ const validarForm = () =>{
           domicilio.focus();
           campo = false;
           return false;
-       }
+        }
 
-     if (campo ==true) { 
+      if (campo ==true) { 
     
         mostrarMensaje()
-         
+          
           return true;
-       }
+        }
           
       };
- 
+
 
 
 
